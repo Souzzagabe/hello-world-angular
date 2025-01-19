@@ -1,0 +1,31 @@
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonMain {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(94, 94, 229);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 80%;
+  align-items: center;
+  height: 500px;
+}
+.buttonMain:hover {
+  background-color: darkblue;
+  transform: scale(1.05);
+}
+
+.buttonMain:active {
+  transform: scale(0.95);
+}
+

@@ -1,0 +1,153 @@
+/* Estilos padrão (Desktop e telas maiores) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+}
+
+header {
+  /* background: linear-gradient(45deg, #000000, #3a3212); */
+  background-color: #1C1C1C;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  height: 90px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Alinha o logo à esquerda e o menu à direita */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  background: transparent;
+  color: white;
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.btn:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+header .menu button:focus {
+  outline: none;
+}
+
+/* Menu de Hambúrguer */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000; /* Garante que o ícone do hambúrguer esteja sempre acima do conteúdo */
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+    font-size: 20px;
+    height: 80px;
+  }
+
+  .logo {
+    height: 120px;
+    width: 120px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu {
+    display: none; /* Esconde o menu em telas pequenas */
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: flex; /* Exibe o menu quando a classe "active" é adicionada */
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  /* Exibe o ícone de hambúrguer */
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  header {
+    font-size: 18px;
+    height: 70px;
+  }
+
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+
+  .menu {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+}
