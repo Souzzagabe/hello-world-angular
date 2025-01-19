@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-hello-world',
-  imports: [ButtonModule],
-  templateUrl: './hello-world.component.html',
-  styleUrl: './hello-world.component.css',
+  templateUrl: './main-content.component.html',
+  styleUrl: './main-content.component.css',
 })
-export class HelloWorldComponent {
+export class MainComponent {
   constructor(public router: Router) {
   }
 
