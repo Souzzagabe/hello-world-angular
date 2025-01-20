@@ -28,7 +28,28 @@
   background: #00796b; /* Cor um pouco mais escura ao passar o mouse */
 }
 
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(87, 84, 84, 0.963);
+  border-left-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 table {
   width: 100%;

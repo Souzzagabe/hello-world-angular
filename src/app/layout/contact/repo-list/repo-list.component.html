@@ -1,22 +1,29 @@
-<div class="repo-list">
-  <table>
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>URL</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (item of repo; track $index){
-      <tr>
-        <td>{{ item.name }}</td>
-        <td>{{ item.description || "Sem descrição" }}</td>
-        <td><a [href]="item.html_url" target="_blank">Visitar</a></td>
-      </tr>
-      }
-    </tbody>
-  </table>
 
-  <!-- <button class="update-btn" (click)="atualizarLista()">Atualizar Lista</button> -->
-</div>
+  @if (isLoading) {
+    <div class="loading-container">
+      <div class="spinner"></div>
+      <p>Carregando repositórios...</p>
+    </div>
+  } @else {
+    <div class="repo-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of repo; track $index) {
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description || "Sem descrição" }}</td>
+            <td><a [href]="item.html_url" target="_blank">Visitar</a></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  }
+
