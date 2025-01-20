@@ -27,5 +27,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('../app/layout/contact/contact.component').then(
         (c) => c.ContactComponent
-  )},
+      ),
+  },
+  { path: '**', redirectTo: 'home' },
 ];

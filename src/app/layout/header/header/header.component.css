@@ -198,3 +198,28 @@ header .menu button:focus {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #1c1c1c;
+    padding: 15px 0;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+}
+

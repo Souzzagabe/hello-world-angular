@@ -4,16 +4,14 @@
       <img src="../../../../G.png" alt="Logo GS" class="logo" />
     </a>
 
-    <div class="menu" id="menu">
+    <div class="menu" [ngClass]="{ 'active': menuAberto }">
       <button class="btn" (click)="trocaPaginaDenovo('home')">Home</button>
       <button class="btn" (click)="trocaPaginaDenovo('about')">About</button>
-      <button class="btn" (click)="trocaPaginaDenovo('contact')">
-        Repos
-      </button>
+      <button class="btn" (click)="trocaPaginaDenovo('contact')">Repos</button>
     </div>
 
     <!-- Menu de hambúrguer -->
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" (click)="toggleMenu()">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
