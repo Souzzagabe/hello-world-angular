@@ -97,7 +97,7 @@ header {
     textFluid 3s ease-in-out infinite;
 }
 
-@keyframes fadeInText {
+/* @keyframes fadeInText {
   0% {
     opacity: 0;
     transform: translateY(-150px);
@@ -151,7 +151,7 @@ header {
   100% {
     background-color: #1c1c1c;
   }
-}
+} */
 
 /* Responsividade para telas pequenas (Mobile) */
 @media (max-width: 767px) {
